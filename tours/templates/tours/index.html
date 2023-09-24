@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все туры</title>
+</head>
+<body>
+    <ul>
+        {% for slot in schedule %}
+            <li>
+                <div class="tour__name">{{ slot.tour.name }}</div>
+                <div class="tour__start_time">Начало: {{ slot.start_time }}</div>
+                <div class="tour__start_location">Место встречи: {{ slot.start_location }}</div>
+                <div class="tour__guide">Ваш гид: {{ slot.tour.guide.fio }} тел: {{ slot.tour.guide.phone}}</div>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
